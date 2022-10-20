@@ -1,0 +1,221 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Noto Sans KR", Helvetica, "맑은 고딕", "malgun gothic",
+    "Apple SD Gothic Neo", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.64px;
+  color: #444;
+}
+
+/* 공통요소 */
+.clearfix::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.inner {
+  position: relative;
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* header */
+.header {
+  position: relative;
+  display: block;
+}
+
+.header .inner {
+  position: relative;
+  display: block;
+}
+
+.headertop {
+  position: relative;
+  display: block;
+}
+
+.headertop-inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.headertop-item {
+  position: relative;
+  display: block;
+  width: 400px;
+  height: 154px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.headertop-item .logopic {
+  position: relative;
+  display: block;
+}
+
+.logopic > a {
+  position: absolute;
+  display: block;
+  top: 30px;
+  left: 39%;
+  width: 71px;
+  height: 94px;
+  font-size: 0;
+  background: url("../image/logo1.png") no-repeat center;
+  background-size: cover;
+}
+
+.headertop-item:last-child {
+  position: relative;
+  display: block;
+  text-align: right;
+}
+
+.headertop-item-sub {
+  color: #8888;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 20px;
+}
+
+.headertop-item-sub > span {
+  margin-right: 20px;
+  font-family: "Gotham A", "Gotham B", "Spoqa Han Sans";
+  font-size: 12px;
+  font-weight: 700;
+  color: #888;
+  letter-spacing: 0.8px;
+}
+
+.headertop-item-sub > span:last-child {
+  margin-right: 0;
+}
+
+.headertop-item-subbutton {
+  position: relative;
+  display: block;
+  padding-top: 30px;
+}
+
+.headertop-item-subbutton > span {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0;
+}
+
+.headertop-item-subbutton > span > button {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 4px 20px;
+  border-radius: 30px;
+  border: 0;
+  background-color: #ff7e6b;
+  color: #fff;
+}
+
+.headertop-item-subbutton > span > .subbutton-blue {
+  background-color: #10adb5;
+}
+
+.headerbottom {
+  position: relative;
+  display: block;
+}
+
+.headerbottom .headerbottom-menu {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 30px;
+}
+
+.headerbottom > .headerbottom-menu > .headerbottom-menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.headerbottom > .headerbottom-menu > .headerbottom-menu-container > li {
+  display: inline-block;
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+/* visual */
+.visual {
+  position: relative;
+  display: block;
+}
+
+/* lager */
+.lager {
+  position: relative;
+  display: block;
+}
+
+/* witale */
+.witale {
+  position: relative;
+  display: block;
+}
+
+/* pellongale */
+.pellongale {
+  position: relative;
+  display: block;
+}
+
+/* gemomeongale */
+.gemomeongale {
+  position: relative;
+  display: block;
+}
+
+/* logomenu */
+.logomenu {
+  position: relative;
+  display: block;
+}
+
+/* footer */
+.footer {
+  position: relative;
+  display: block;
+}
