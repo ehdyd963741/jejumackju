@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url(https://jbimweb.s3.ap-northeast-2.amazonaws.com/resource/css/fonts.css);
 
 * {
   margin: 0;
@@ -24,16 +24,15 @@ img {
 
 html {
   font-size: 16px;
+  letter-spacing: -0.5px;
 }
 
 body {
-  font-family: "Noto Sans KR", Helvetica, "맑은 고딕", "malgun gothic",
-    "Apple SD Gothic Neo", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.4;
-  letter-spacing: -0.64px;
+  font-family: "Gotham A", "Gotham B", "Spoqa Han Sans";
+  font-weight: 500;
+  letter-spacing: -0.5px;
   color: #444;
+  overflow-x: hidden;
 }
 
 /* 공통요소 */
@@ -90,7 +89,7 @@ body {
   display: block;
 }
 
-.logopic > a {
+.logopic>a {
   position: absolute;
   display: block;
   top: 30px;
@@ -115,16 +114,16 @@ body {
   padding-top: 20px;
 }
 
-.headertop-item-sub > span {
+.headertop-item-sub>span {
   margin-right: 20px;
-  font-family: "Gotham A", "Gotham B", "Spoqa Han Sans";
+
   font-size: 12px;
   font-weight: 700;
   color: #888;
   letter-spacing: 0.8px;
 }
 
-.headertop-item-sub > span:last-child {
+.headertop-item-sub>span:last-child {
   margin-right: 0;
 }
 
@@ -134,24 +133,25 @@ body {
   padding-top: 30px;
 }
 
-.headertop-item-subbutton > span {
+.headertop-item-subbutton>span {
   position: relative;
   display: inline-block;
   margin-right: 10px;
   font-size: 0;
 }
 
-.headertop-item-subbutton > span > button {
-  font-size: 14px;
-  font-weight: 700;
+.headertop-item-subbutton>span>button {
   padding: 4px 20px;
   border-radius: 30px;
   border: 0;
   background-color: #ff7e6b;
   color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
-.headertop-item-subbutton > span > .subbutton-blue {
+.headertop-item-subbutton>span>.subbutton-blue {
   background-color: #10adb5;
 }
 
@@ -160,22 +160,30 @@ body {
   display: block;
 }
 
-.headerbottom .headerbottom-menu {
+.headerbottom ul {
   position: relative;
   display: block;
-  width: 100%;
-  height: 30px;
+  margin: 0 auto;
+  padding-left: 100px;
 }
 
-.headerbottom > .headerbottom-menu > .headerbottom-menu-container {
+.headerbottom ul li {
   position: relative;
   display: inline-block;
+  color: #55585b;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 0 50px;
+  font-weight: 900;
+  height: 40px;
+  display: table-cell;
 }
 
-.headerbottom > .headerbottom-menu > .headerbottom-menu-container > li {
-  display: inline-block;
-  font-size: 30px;
-  margin: 0 auto;
+.headerbottom ul li span {
+  color: rgb(85, 88, 91);
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 30.4px;
 }
 
 /* visual */
@@ -184,10 +192,97 @@ body {
   display: block;
 }
 
+.visual-video {
+  width: 100%;
+  object-fit: contain;
+}
+
 /* lager */
 .lager {
   position: relative;
   display: block;
+}
+
+.lager-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1903px;
+  height: 593px;
+  background: url("../image/pado.png") no-repeat center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.lager .inner {}
+
+.lager-title {
+  position: absolute;
+  display: block;
+  top: 70px;
+  left: 34%;
+  width: 400px;
+  height: 173px;
+  margin-bottom: 30px;
+}
+
+.lager-title>img {
+  position: absolute;
+  display: block;
+  left: 25%;
+  width: 187px;
+  height: 173px;
+}
+
+.lager-left {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 250px;
+  top: 270px;
+  left: 200px;
+  margin-right: 0;
+}
+
+.lager-left>img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 266px;
+}
+
+.lager-text-box {
+  position: relative;
+  display: block;
+  height: 343px;
+}
+
+.lager-emty {
+  width: 100%;
+  height: 110px;
+}
+
+.lager-text-box-p {
+  position: relative;
+  display: block;
+  width: 500px;
+  left: 433px;
+}
+
+.lager-text-box-p>ul {
+  position: relative;
+  display: block;
+}
+
+.lager-text-box-p>ul>li {
+  position: relative;
+  display: block;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
 }
 
 /* witale */
@@ -196,10 +291,182 @@ body {
   display: block;
 }
 
+.witale-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1903px;
+  height: 571px;
+  background: url("../image/witale3.png") no-repeat center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.witale .inner {
+  position: relative;
+  display: block;
+}
+
+.witale-title {
+  position: absolute;
+  display: block;
+  top: 70px;
+  left: 35%;
+  width: 400px;
+  height: 173px;
+  margin-bottom: 30px;
+}
+
+.witale-title>img {
+  position: absolute;
+  display: block;
+  top: 38px;
+  left: 17px;
+  width: 340px;
+  height: 91px;
+}
+
+.witale-left {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 250px;
+  top: 270px;
+  left: 200px;
+  margin-right: 0;
+}
+
+.witale-left>img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 266px;
+}
+
+.witale-text-box {
+  position: relative;
+  display: block;
+  height: 321px;
+}
+
+.witale-emty {
+  width: 100%;
+  height: 110px;
+}
+
+.witale-text-box-p {
+  position: relative;
+  display: block;
+  width: 500px;
+  left: 433px;
+}
+
+.witale-text-box-p>ul {
+  position: relative;
+  display: block;
+}
+
+.witale-text-box-p>ul>li {
+  position: relative;
+  display: block;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
 /* pellongale */
 .pellongale {
   position: relative;
   display: block;
+}
+
+.pellongale-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1903px;
+  height: 526px;
+  background: url("../image/pellongale3.png") no-repeat center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.pellongale .inner {
+  position: relative;
+  display: block;
+}
+
+.pellongale-title {
+  position: absolute;
+  display: block;
+  top: 35px;
+  left: 35%;
+  width: 400px;
+  height: 173px;
+  margin-bottom: 30px;
+}
+
+.pellongale-title>img {
+  position: absolute;
+  display: block;
+  top: 38px;
+  left: 17px;
+  width: 322.5px;
+  height: 85px;
+}
+
+.pellongale-left {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 250px;
+  top: 190px;
+  left: 200px;
+  margin-right: 0;
+}
+
+.pellongale-left>img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 266px;
+}
+
+.pellongale-text-box {
+  position: relative;
+  display: block;
+  height: 276px;
+}
+
+.pellongale-emty {
+  width: 100%;
+  height: 25px;
+}
+
+.pellongale-text-box-p {
+  position: relative;
+  display: block;
+  width: 700px;
+  left: 433px;
+}
+
+.pellongale-text-box-p>ul {
+  position: relative;
+  display: block;
+}
+
+.pellongale-text-box-p>ul>li {
+  position: relative;
+  display: block;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
 }
 
 /* gemomeongale */
@@ -208,10 +475,149 @@ body {
   display: block;
 }
 
+.gemomeongale-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1903px;
+  height: 524px;
+  background: url("../image/geomale3.png") no-repeat center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.gemomeongale .inner {
+  position: relative;
+  display: block;
+}
+
+.gemomeongale-title {
+  position: absolute;
+  display: block;
+  top: 35px;
+  left: 35%;
+  width: 400px;
+  height: 171px;
+  margin-bottom: 30px;
+}
+
+.gemomeongale-title>img {
+  position: absolute;
+  display: block;
+  top: 38px;
+  left: 17px;
+  width: 310.63px;
+  height: 84px;
+}
+
+.gemomeongale-left {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 250px;
+  top: 190px;
+  left: 200px;
+  margin-right: 0;
+}
+
+.gemomeongale-left>img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 266px;
+}
+
+.gemomeongale-text-box {
+  position: relative;
+  display: block;
+  height: 274px;
+}
+
+.gemomeongale-emty {
+  width: 100%;
+  height: 35px;
+}
+
+.gemomeongale-text-box-p {
+  position: relative;
+  display: block;
+  width: 700px;
+  left: 433px;
+}
+
+.gemomeongale-text-box-p>ul {
+  position: relative;
+  display: block;
+}
+
+.gemomeongale-text-box-p>ul>li {
+  position: relative;
+  display: block;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
 /* logomenu */
 .logomenu {
   position: relative;
   display: block;
+}
+
+.logomenu .inner {
+  position: relative;
+  display: block;
+}
+
+.logomenu-emty {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 56px;
+}
+
+.logomenu-title {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.logomenu-title>p {
+  position: relative;
+  display: inline;
+  color: #1ecad3;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  line-height: 32px;
+}
+
+.logomenu-emty2 {
+  position: relative;
+  display: block;
+  height: 30px;
+}
+
+.logomenuswiper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  padding: 15;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 155px;
+  height: 59px;
 }
 
 /* footer */
