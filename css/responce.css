@@ -1,0 +1,83 @@
+/* header */
+@media screen and (max-width: 1056px) {
+  .headerbottom ul li span {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .header {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: #fff;
+  }
+  .header .inner {
+    display: none;
+  }
+}
+@media screen and (max-width: 766px) {
+  .header {
+    height: 50px;
+  }
+}
+/* visual */
+@media screen and (max-width: 766px) {
+  .visual-video {
+    display: none;
+  }
+  .visual-video2 {
+    display: block;
+  }
+}
+/* lager */
+@media screen and (max-width: 991px) {
+  .lager .inner {
+    height: 593px;
+  }
+  .lager-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 593px;
+    background: url("../image/padoM.png") no-repeat center;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .lager-title {
+    width: 20%;
+    left: 40%;
+  }
+
+  .lager-title > img {
+    left: 20%;
+    width: 153px;
+    height: 142px;
+  }
+
+  .lager-left {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 272px;
+  }
+
+  .lager-left > img {
+    position: absolute;
+    display: block;
+  }
+
+  .lager-text-box {
+    position: relative;
+    display: none;
+    height: 343px;
+  }
+  .lager-text-box2 {
+    display: block;
+  }
+  .lager-text-box-empty {
+    display: block;
+  }
+}

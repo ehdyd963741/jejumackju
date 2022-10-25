@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url(https://jbimweb.s3.ap-northeast-2.amazonaws.com/resource/css/fonts.css);
+/* @import url(https://jbimweb.s3.ap-northeast-2.amazonaws.com/resource/css/fonts.css); */
 
 * {
   margin: 0;
@@ -23,6 +23,7 @@ img {
 }
 
 html {
+  font-family: "Gotham A", "Gotham B", "Spoqa Han Sans";
   font-size: 16px;
   letter-spacing: -0.5px;
 }
@@ -50,7 +51,150 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+/* ------------------------------- 안내창 ---------------------------------------------- */
+.modal-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99999;
+}
 
+.modal-main {
+  position: absolute;
+  left: 35%;
+  top: 30%;
+  width: 500px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0px 0px 15px 0px (0 0 0 / 70%);
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.modal-main h1 {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+  padding: 30px 0;
+}
+.modal-main p {
+  text-align: center;
+  font-weight: 300;
+  font-size: 13.5px;
+  color: #111;
+  line-height: 1.8;
+}
+.modal-main b {
+  font-weight: 600;
+  color: tomato;
+  text-decoration: underline;
+}
+
+.modal-main > ul {
+  text-align: left;
+  padding-left: 5%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background: #55585b;
+  border-radius: 10px;
+}
+
+.modal-main > ul > li {
+  padding-bottom: 10px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.modal-main > ul > li > a {
+  color: tomato;
+}
+
+.modal-main strong {
+  font-weight: 600;
+  color: tomato;
+  text-decoration: underline;
+}
+.modal-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border: 0;
+  cursor: pointer;
+  font-size: 20px;
+  background: transparent;
+  color: #999;
+  transition: transform 0.4s;
+}
+.modal-close:hover {
+  transform: rotate(90deg);
+}
+/* ------------------------------- 안내창 종료 ---------------------------------------------- */
+/*-------------------------- fixmenu ---------------------------------------------- */
+.fix-menu {
+  position: fixed;
+  display: block;
+  right: 10px;
+  bottom: 40%;
+  display: block;
+  text-align: center;
+  line-height: 4.5;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.fix-menu-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.fix-menu a {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  width: 75px;
+  height: 75px;
+}
+
+.fix-menu ul li a img {
+  width: 60px;
+  height: 60px;
+}
+
+/*-------------------------- fixmenu 종료 ---------------------------------------------- */
+/* ------------------------- mb-bt ---------------------------------------------------- */
+/*-------------------------- go top ----------------------------------------------  */
+.gotop {
+  position: fixed;
+  display: block;
+  right: 16px;
+  bottom: 32%;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url("../image/fixmenu3.png") no-repeat center;
+  background-size: cover;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.gotop-show {
+  opacity: 1;
+  visibility: visible;
+}
+/*-------------------------- go top ----------------------------------------------  */
 /* header */
 .header {
   position: relative;
@@ -89,11 +233,11 @@ body {
   display: block;
 }
 
-.logopic>a {
+.logopic > a {
   position: absolute;
   display: block;
   top: 30px;
-  left: 39%;
+  left: 41%;
   width: 71px;
   height: 94px;
   font-size: 0;
@@ -114,47 +258,74 @@ body {
   padding-top: 20px;
 }
 
-.headertop-item-sub>span {
+.headertop-item-sub > span {
   margin-right: 20px;
-
   font-size: 12px;
   font-weight: 700;
+  font-style: bold;
   color: #888;
   letter-spacing: 0.8px;
+  line-height: 19.2px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.headertop-item-sub>span:last-child {
+.headertop-item-sub > span:hover {
+  color: rgba(136, 136, 136, 0.5);
+}
+
+.headertop-item-sub > span:last-child {
   margin-right: 0;
 }
 
 .headertop-item-subbutton {
   position: relative;
   display: block;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
-.headertop-item-subbutton>span {
+.headertop-item-subbutton > span {
   position: relative;
   display: inline-block;
-  margin-right: 10px;
   font-size: 0;
 }
 
-.headertop-item-subbutton>span>button {
-  padding: 4px 20px;
+.headertop-item-subbutton > span > button {
+  padding: 5px 15px;
   border-radius: 30px;
-  border: 0;
+  border: 1px solid #fff;
   background-color: #ff7e6b;
   color: #fff;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 900;
+  font-family: "Gotham A", "Gotham B", "Spoqa Han Sans";
+  letter-spacing: -0.5px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.headertop-item-subbutton > span > button:hover {
+  background: rgb(255, 255, 255);
+  border: 1px solid #ff7e6b;
+  color: #ff7e6b;
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 900;
+  font-family: "Gotham A", "Gotham B", "Spoqa Han Sans";
   letter-spacing: -0.5px;
 }
 
-.headertop-item-subbutton>span>.subbutton-blue {
-  background-color: #10adb5;
+.headertop-item-subbutton > span > .subbutton-blue {
+  border: 1px solid #1ecad3;
+  background-color: #1ecad3;
 }
 
+.headertop-item-subbutton > span > .subbutton-blue:hover {
+  background-color: #10adb5;
+  color: #fff;
+  border: 1px solid #10adb5;
+}
 .headerbottom {
   position: relative;
   display: block;
@@ -171,10 +342,8 @@ body {
   position: relative;
   display: inline-block;
   color: #55585b;
-  font-size: 14px;
   letter-spacing: 1px;
   padding: 0 50px;
-  font-weight: 900;
   height: 40px;
   display: table-cell;
 }
@@ -184,6 +353,22 @@ body {
   cursor: pointer;
   font-size: 14px;
   line-height: 30.4px;
+  font-style: bold;
+  font-weight: 900;
+  line-height: 22.4px;
+  font-family: "Gotham A", "Gotham B", "Spoqa Han Sans";
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.headerbottom ul li span:hover {
+  color: rgb(153, 153, 153);
+}
+
+.header-empty {
+  position: relative;
+  display: block;
+  height: 22.39px;
 }
 
 /* visual */
@@ -196,7 +381,10 @@ body {
   width: 100%;
   object-fit: contain;
 }
-
+.visual-video2 {
+  display: none;
+  width: 100%;
+}
 /* lager */
 .lager {
   position: relative;
@@ -207,14 +395,15 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1903px;
+  width: 100%;
   height: 593px;
   background: url("../image/pado.png") no-repeat center;
   background-size: cover;
   z-index: -1;
 }
 
-.lager .inner {}
+.lager .inner {
+}
 
 .lager-title {
   position: absolute;
@@ -226,7 +415,7 @@ body {
   margin-bottom: 30px;
 }
 
-.lager-title>img {
+.lager-title > img {
   position: absolute;
   display: block;
   left: 25%;
@@ -244,7 +433,7 @@ body {
   margin-right: 0;
 }
 
-.lager-left>img {
+.lager-left > img {
   position: absolute;
   display: block;
   top: 0;
@@ -271,12 +460,12 @@ body {
   left: 433px;
 }
 
-.lager-text-box-p>ul {
+.lager-text-box-p > ul {
   position: relative;
   display: block;
 }
 
-.lager-text-box-p>ul>li {
+.lager-text-box-p > ul > li {
   position: relative;
   display: block;
   padding-bottom: 10px;
@@ -285,6 +474,29 @@ body {
   color: #fff;
 }
 
+.lager-text-box2 {
+  position: relative;
+  display: none;
+  transform: translateY(100%);
+  width: 100%;
+  height: 180px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.lager-text-box-p2 > ul > li {
+  position: relative;
+  display: block;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.lager-text-box-empty {
+  position: relative;
+  display: none;
+  height: 50px;
+}
 /* witale */
 .witale {
   position: relative;
@@ -295,7 +507,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1903px;
+  width: 100%;
   height: 571px;
   background: url("../image/witale3.png") no-repeat center;
   background-size: cover;
@@ -317,7 +529,7 @@ body {
   margin-bottom: 30px;
 }
 
-.witale-title>img {
+.witale-title > img {
   position: absolute;
   display: block;
   top: 38px;
@@ -336,7 +548,7 @@ body {
   margin-right: 0;
 }
 
-.witale-left>img {
+.witale-left > img {
   position: absolute;
   display: block;
   top: 0;
@@ -363,12 +575,12 @@ body {
   left: 433px;
 }
 
-.witale-text-box-p>ul {
+.witale-text-box-p > ul {
   position: relative;
   display: block;
 }
 
-.witale-text-box-p>ul>li {
+.witale-text-box-p > ul > li {
   position: relative;
   display: block;
   padding-bottom: 10px;
@@ -387,7 +599,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1903px;
+  width: 100%;
   height: 526px;
   background: url("../image/pellongale3.png") no-repeat center;
   background-size: cover;
@@ -409,7 +621,7 @@ body {
   margin-bottom: 30px;
 }
 
-.pellongale-title>img {
+.pellongale-title > img {
   position: absolute;
   display: block;
   top: 38px;
@@ -428,7 +640,7 @@ body {
   margin-right: 0;
 }
 
-.pellongale-left>img {
+.pellongale-left > img {
   position: absolute;
   display: block;
   top: 0;
@@ -455,12 +667,12 @@ body {
   left: 433px;
 }
 
-.pellongale-text-box-p>ul {
+.pellongale-text-box-p > ul {
   position: relative;
   display: block;
 }
 
-.pellongale-text-box-p>ul>li {
+.pellongale-text-box-p > ul > li {
   position: relative;
   display: block;
   padding-bottom: 10px;
@@ -479,7 +691,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1903px;
+  width: 100%;
   height: 524px;
   background: url("../image/geomale3.png") no-repeat center;
   background-size: cover;
@@ -501,7 +713,7 @@ body {
   margin-bottom: 30px;
 }
 
-.gemomeongale-title>img {
+.gemomeongale-title > img {
   position: absolute;
   display: block;
   top: 38px;
@@ -520,7 +732,7 @@ body {
   margin-right: 0;
 }
 
-.gemomeongale-left>img {
+.gemomeongale-left > img {
   position: absolute;
   display: block;
   top: 0;
@@ -547,12 +759,12 @@ body {
   left: 433px;
 }
 
-.gemomeongale-text-box-p>ul {
+.gemomeongale-text-box-p > ul {
   position: relative;
   display: block;
 }
 
-.gemomeongale-text-box-p>ul>li {
+.gemomeongale-text-box-p > ul > li {
   position: relative;
   display: block;
   padding-bottom: 10px;
@@ -586,7 +798,7 @@ body {
   text-align: center;
 }
 
-.logomenu-title>p {
+.logomenu-title > p {
   position: relative;
   display: inline;
   color: #1ecad3;
@@ -619,9 +831,119 @@ body {
   width: 155px;
   height: 59px;
 }
-
+.logomenu-emty3 {
+  position: relative;
+  display: block;
+  height: 143px;
+}
 /* footer */
 .footer {
   position: relative;
   display: block;
 }
+.footer-conta {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.footer-top {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.footer-menu {
+  position: relative;
+  display: block;
+  float: left;
+  width: 49%;
+}
+
+.footer-menu ul {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-menu ul li {
+  position: relative;
+  display: inline-block;
+}
+.footer-menu ul li a {
+  padding: 10px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  color: rgb(153, 153, 153);
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+}
+
+.footer-logo {
+  position: relative;
+  display: block;
+  float: right;
+}
+
+.footer-logo span {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-serach {
+  width: 190px;
+  height: 38px;
+  background: url("../image/searchmenu1.png") no-repeat center;
+  background-size: contain;
+}
+.footer-facebook {
+  width: 40px;
+  height: 40px;
+  background: url("../image/searchmenu2.png") no-repeat center;
+  background-size: contain;
+}
+.footer-instar {
+  width: 40px;
+  height: 40px;
+  background: url("../image/searchmenu3.png") no-repeat center;
+  background-size: contain;
+}
+.footer-naver {
+  width: 40px;
+  height: 40px;
+  background: url("../image/searchmenu4.png") no-repeat center;
+  background-size: contain;
+}
+
+.footer-bottom-text {
+  position: relative;
+  display: block;
+  padding-left: 10px;
+}
+.footer-bottom-text p {
+  font-size: 13px;
+  color: #999;
+  line-height: 23.4px;
+  letter-spacing: -0.5px;
+  font-weight: 400;
+  font-style: normal;
+}
+.footer-company {
+  position: relative;
+  display: block;
+  padding-left: 10px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.footer-company > p {
+  font-size: 11px;
+  color: #999;
+  line-height: 19.8px;
+  letter-spacing: -0.5px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* 반응형 */
